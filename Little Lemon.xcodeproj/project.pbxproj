@@ -7,8 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		DDD2F99629B3E9CE0058A7E5 /* Onboarding.swift in Sources */ = {isa = PBXBuildFile; fileRef = DDD2F99529B3E9CE0058A7E5 /* Onboarding.swift */; };
 		DDDF305929AD557E0084524A /* Little_LemonApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = DDDF305829AD557E0084524A /* Little_LemonApp.swift */; };
-		DDDF305B29AD557E0084524A /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DDDF305A29AD557E0084524A /* ContentView.swift */; };
 		DDDF305D29AD557E0084524A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DDDF305C29AD557E0084524A /* Assets.xcassets */; };
 		DDDF306029AD557E0084524A /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DDDF305F29AD557E0084524A /* Preview Assets.xcassets */; };
 		DDDF306229AD557E0084524A /* Persistence.swift in Sources */ = {isa = PBXBuildFile; fileRef = DDDF306129AD557E0084524A /* Persistence.swift */; };
@@ -16,9 +16,9 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		DDD2F99529B3E9CE0058A7E5 /* Onboarding.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Onboarding.swift; sourceTree = "<group>"; };
 		DDDF305529AD557E0084524A /* Little Lemon.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Little Lemon.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		DDDF305829AD557E0084524A /* Little_LemonApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Little_LemonApp.swift; sourceTree = "<group>"; };
-		DDDF305A29AD557E0084524A /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		DDDF305C29AD557E0084524A /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		DDDF305F29AD557E0084524A /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		DDDF306129AD557E0084524A /* Persistence.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Persistence.swift; sourceTree = "<group>"; };
@@ -56,11 +56,11 @@
 			isa = PBXGroup;
 			children = (
 				DDDF305829AD557E0084524A /* Little_LemonApp.swift */,
-				DDDF305A29AD557E0084524A /* ContentView.swift */,
 				DDDF305C29AD557E0084524A /* Assets.xcassets */,
 				DDDF306129AD557E0084524A /* Persistence.swift */,
 				DDDF306329AD557E0084524A /* Little_Lemon.xcdatamodeld */,
 				DDDF305E29AD557E0084524A /* Preview Content */,
+				DDD2F99529B3E9CE0058A7E5 /* Onboarding.swift */,
 			);
 			path = "Little Lemon";
 			sourceTree = "<group>";
@@ -145,7 +145,7 @@
 			files = (
 				DDDF306229AD557E0084524A /* Persistence.swift in Sources */,
 				DDDF306529AD557E0084524A /* Little_Lemon.xcdatamodeld in Sources */,
-				DDDF305B29AD557E0084524A /* ContentView.swift in Sources */,
+				DDD2F99629B3E9CE0058A7E5 /* Onboarding.swift in Sources */,
 				DDDF305929AD557E0084524A /* Little_LemonApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
