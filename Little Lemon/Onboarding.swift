@@ -12,6 +12,9 @@ let kFirstName = "first name key"
 let kLastName = "last name key"
 let kEmail = "email key"
 
+let kIsLoggedIn = "kIsLoggedIn"
+
+
 struct Onboarding: View {
 //    Declare form user input variables
     @State var firstName = ""
@@ -39,9 +42,16 @@ struct Onboarding: View {
                         
                         // If not empty navigate to home page
                         isLoggedIn = true
+                        
+                        UserDefaults.standard.set(true, forKey: kIsLoggedIn)
                     }
                 } label: {
                     Text("Register")
+                }
+            }
+            .onAppear {
+                if UserDefaults.standard.bool(forKey: kIsLoggedIn) {
+                    isLoggedIn = true
                 }
             }
         }
