@@ -12,6 +12,7 @@
 		DD09F9C029B6B0B200740B6D /* MenuList.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD09F9BF29B6B0B200740B6D /* MenuList.swift */; };
 		DD09F9C229B6B12900740B6D /* MenuItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD09F9C129B6B12900740B6D /* MenuItem.swift */; };
 		DD09F9C529B6B92000740B6D /* ExampleDatabase.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = DD09F9C329B6B92000740B6D /* ExampleDatabase.xcdatamodeld */; };
+		DD4B40A829B7C26F009F9612 /* ItemInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD4B40A729B7C26F009F9612 /* ItemInfo.swift */; };
 		DDBDC2DA29B4110A00032FF1 /* Home.swift in Sources */ = {isa = PBXBuildFile; fileRef = DDBDC2D929B4110A00032FF1 /* Home.swift */; };
 		DDBDC2DC29B4118C00032FF1 /* Menu.swift in Sources */ = {isa = PBXBuildFile; fileRef = DDBDC2DB29B4118C00032FF1 /* Menu.swift */; };
 		DDBDC2DE29B420D900032FF1 /* UserProfile.swift in Sources */ = {isa = PBXBuildFile; fileRef = DDBDC2DD29B420D900032FF1 /* UserProfile.swift */; };
@@ -28,6 +29,7 @@
 		DD09F9BF29B6B0B200740B6D /* MenuList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuList.swift; sourceTree = "<group>"; };
 		DD09F9C129B6B12900740B6D /* MenuItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuItem.swift; sourceTree = "<group>"; };
 		DD09F9C429B6B92000740B6D /* ExampleDatabase.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = ExampleDatabase.xcdatamodel; sourceTree = "<group>"; };
+		DD4B40A729B7C26F009F9612 /* ItemInfo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ItemInfo.swift; sourceTree = "<group>"; };
 		DDBDC2D929B4110A00032FF1 /* Home.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Home.swift; sourceTree = "<group>"; };
 		DDBDC2DB29B4118C00032FF1 /* Menu.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Menu.swift; sourceTree = "<group>"; };
 		DDBDC2DD29B420D900032FF1 /* UserProfile.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserProfile.swift; sourceTree = "<group>"; };
@@ -82,6 +84,7 @@
 				DD09F9C329B6B92000740B6D /* ExampleDatabase.xcdatamodeld */,
 				DD09F9BF29B6B0B200740B6D /* MenuList.swift */,
 				DD09F9C129B6B12900740B6D /* MenuItem.swift */,
+				DD4B40A729B7C26F009F9612 /* ItemInfo.swift */,
 			);
 			path = "Little Lemon";
 			sourceTree = "<group>";
@@ -168,6 +171,7 @@
 				DD09F9BD29B6AFB800740B6D /* Persistence.swift in Sources */,
 				DDBDC2DE29B420D900032FF1 /* UserProfile.swift in Sources */,
 				DDDF306529AD557E0084524A /* Little_Lemon.xcdatamodeld in Sources */,
+				DD4B40A829B7C26F009F9612 /* ItemInfo.swift in Sources */,
 				DDBDC2DA29B4110A00032FF1 /* Home.swift in Sources */,
 				DDD2F99629B3E9CE0058A7E5 /* Onboarding.swift in Sources */,
 				DDDF305929AD557E0084524A /* Little_LemonApp.swift in Sources */,

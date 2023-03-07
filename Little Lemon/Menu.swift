@@ -21,18 +21,24 @@ struct Menu: View {
             FetchedObjects() { (dishes: [Dish]) in
                 List {
                     ForEach(dishes) { dish in
-                        Text((dish.title ?? ""))
-                        Text("$" + (dish.price ?? ""))
-                        let imageURL = dish.image ?? ""
-                        AsyncImage(url: URL(string: imageURL)!){ image in
-                            image
-                                .resizable()
-                                .aspectRatio(contentMode: .fit)
-                        } placeholder: {
-                            Image(systemName: "photo.fill")
-                        }.frame(width: 250, height: 250)
-                            
-                    }
+//                        TODO: pass dish.info to ItemInfo() view for text display
+//                        NavigationLink(destination: ItemInfo()) {
+                            VStack(alignment: .leading) {
+                                //                        TODO: Add Navigation to go to new desciption / info page
+                                Text((dish.title ?? ""))
+                                Text("$" + (dish.price ?? ""))
+                                let imageURL = dish.image ?? ""
+                                AsyncImage(url: URL(string: imageURL)!){ image in
+                                    image
+                                        .resizable()
+                                        .aspectRatio(contentMode: .fit)
+                                } placeholder: {
+                                    Image(systemName: "photo.fill")
+                                }.frame(width: 250, height: 250)
+                                
+                            }
+//                        }
+                        }
                 }
             }
             .onAppear{
@@ -61,6 +67,7 @@ struct Menu: View {
                     newDish.title = $0.title
                     newDish.image = $0.image
                     newDish.price = $0.price
+                    newDish.info = $0.description
                 })
 //                Save data in database after loop ends
                 try? viewContext.save()
