@@ -19,7 +19,6 @@
 		DDDF305929AD557E0084524A /* Little_LemonApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = DDDF305829AD557E0084524A /* Little_LemonApp.swift */; };
 		DDDF305D29AD557E0084524A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DDDF305C29AD557E0084524A /* Assets.xcassets */; };
 		DDDF306029AD557E0084524A /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DDDF305F29AD557E0084524A /* Preview Assets.xcassets */; };
-		DDDF306229AD557E0084524A /* Persistence.swift in Sources */ = {isa = PBXBuildFile; fileRef = DDDF306129AD557E0084524A /* Persistence.swift */; };
 		DDDF306529AD557E0084524A /* Little_Lemon.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = DDDF306329AD557E0084524A /* Little_Lemon.xcdatamodeld */; };
 /* End PBXBuildFile section */
 
@@ -37,7 +36,6 @@
 		DDDF305829AD557E0084524A /* Little_LemonApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Little_LemonApp.swift; sourceTree = "<group>"; };
 		DDDF305C29AD557E0084524A /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		DDDF305F29AD557E0084524A /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
-		DDDF306129AD557E0084524A /* Persistence.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Persistence.swift; sourceTree = "<group>"; };
 		DDDF306429AD557E0084524A /* Little_Lemon.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Little_Lemon.xcdatamodel; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -74,7 +72,6 @@
 				DDDF305829AD557E0084524A /* Little_LemonApp.swift */,
 				DDDF305C29AD557E0084524A /* Assets.xcassets */,
 				DD09F9BC29B6AFB800740B6D /* FetchedObjects.swift */,
-				DDDF306129AD557E0084524A /* Persistence.swift */,
 				DDDF306329AD557E0084524A /* Little_Lemon.xcdatamodeld */,
 				DDDF305E29AD557E0084524A /* Preview Content */,
 				DDD2F99529B3E9CE0058A7E5 /* Onboarding.swift */,
@@ -169,7 +166,6 @@
 			files = (
 				DDBDC2DC29B4118C00032FF1 /* Menu.swift in Sources */,
 				DD09F9BD29B6AFB800740B6D /* Persistence.swift in Sources */,
-				DDDF306229AD557E0084524A /* Persistence.swift in Sources */,
 				DDBDC2DE29B420D900032FF1 /* UserProfile.swift in Sources */,
 				DDDF306529AD557E0084524A /* Little_Lemon.xcdatamodeld in Sources */,
 				DDBDC2DA29B4110A00032FF1 /* Home.swift in Sources */,
