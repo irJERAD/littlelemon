@@ -21,7 +21,17 @@ struct Menu: View {
             FetchedObjects() { (dishes: [Dish]) in
                 List {
                     ForEach(dishes) { dish in
-                        Text((dish.title ?? "") + "$" + (dish.price ?? ""))
+                        Text((dish.title ?? ""))
+                        Text("$" + (dish.price ?? ""))
+                        let imageURL = dish.image ?? ""
+                        AsyncImage(url: URL(string: imageURL)!){ image in
+                            image
+                                .resizable()
+                                .aspectRatio(contentMode: .fit)
+                        } placeholder: {
+                            Image(systemName: "photo.fill")
+                        }.frame(width: 250, height: 250)
+                            
                     }
                 }
             }
