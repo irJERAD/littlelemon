@@ -7,6 +7,11 @@
 
 import SwiftUI
 
+enum Order: String, CaseIterable, Identifiable {
+    case starters, mains, desserts, drinks
+    var id: Self { self }
+}
+
 struct Menu: View {
     
     @Environment(\.managedObjectContext) private var viewContext
@@ -21,6 +26,8 @@ struct Menu: View {
 //    Create search variable for filtering FetchObjects
     @State var searchText = ""
     
+    @State private var selectedOrder: Order = .starters
+    
 //    Create predicate to filder FetchObjects with searchText variable
     func buildPredicate() -> NSPredicate {
 //        empy searchText filters all dishes so return value: true if empty
@@ -34,12 +41,44 @@ struct Menu: View {
     
     var body: some View {
         VStack {
-            Text("Little Lemon")
-            Text("San Diego")
-            Text("We are a family owned Mediterranean restaurant, focused on traditional recipes served with a modern twist.")
-//            List {
-//            }
-            TextField("Search menu", text: $searchText)
+            Header()
+            VStack(alignment: .leading, spacing: 5) {
+                    Text("Little Lemon")
+                    .foregroundColor(Color(hex: 0xf1c514))
+                    .fontWeight(.bold)
+                    .font(.largeTitle)
+                    .padding(.top)
+                HStack{
+                    VStack(alignment: .leading) {
+                        Text("San Diego")
+                            .font(.title)
+                        Text("We are a family owned Mediterranean restaurant, focused on traditional recipes served with a modern twist.")
+                    }
+                    Image("Hero image")
+                        .resizable()
+                        .frame(width: 150, height: 140)
+                        .cornerRadius(25)
+                }
+                TextField("Search menu", text: $searchText)
+                    .font(.title)
+                    .foregroundColor(.white)
+                    .background(Color.white)
+                    .cornerRadius(15)
+                    .padding(10)
+                }
+            .padding(.leading)
+            .frame(maxWidth: .infinity)
+            .foregroundColor(.white)
+            .background(Color(hex: 0x394C45))
+            
+//            Selector
+            Picker("order", selection: $selectedOrder) {
+                ForEach(Order.allCases) { order in
+                    Text(order.rawValue.capitalized)
+                }
+            }
+            .pickerStyle(.segmented)
+            
             FetchedObjects(predicate: buildPredicate(),
                            sortDescriptors: buildSortDescriptors(),
                            content: { (dishes: [Dish]) in
@@ -114,5 +153,14 @@ struct Menu: View {
 struct Menu_Previews: PreviewProvider {
     static var previews: some View {
         Menu()
+    }
+}
+
+extension Color {
+    init(hex: Int, opacity: Double = 1.0) {
+        let red = Double((hex & 0xff0000) >> 16) / 255.0
+        let green = Double((hex & 0xff00) >> 8) / 255.0
+        let blue = Double((hex & 0xff) >> 0) / 255.0
+        self.init(.sRGB, red: red, green: green, blue: blue, opacity: opacity)
     }
 }
