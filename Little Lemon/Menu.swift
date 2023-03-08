@@ -11,6 +11,27 @@ struct Menu: View {
     
     @Environment(\.managedObjectContext) private var viewContext
     
+//    Build sort descriptor for FetchObjects to sort by title
+    func buildSortDescriptors() -> [NSSortDescriptor] {
+        return [NSSortDescriptor(key: "title",
+                                 ascending: true,
+                                 selector: #selector(NSString.localizedStandardCompare))]
+    }
+    
+//    Create search variable for filtering FetchObjects
+    @State var searchText = ""
+    
+//    Create predicate to filder FetchObjects with searchText variable
+    func buildPredicate() -> NSPredicate {
+//        empy searchText filters all dishes so return value: true if empty
+        if searchText.isEmpty {
+            return NSPredicate(value: true)
+        } else {
+            return NSPredicate(format: "title CONTAINS[cd] %@", searchText)
+        }
+    }
+    
+    
     var body: some View {
         VStack {
             Text("Little Lemon")
@@ -18,7 +39,10 @@ struct Menu: View {
             Text("We are a family owned Mediterranean restaurant, focused on traditional recipes served with a modern twist.")
 //            List {
 //            }
-            FetchedObjects() { (dishes: [Dish]) in
+            TextField("Search menu", text: $searchText)
+            FetchedObjects(predicate: buildPredicate(),
+                           sortDescriptors: buildSortDescriptors(),
+                           content: { (dishes: [Dish]) in
                 List {
                     ForEach(dishes) { dish in
 //                        TODO: pass dish.info to ItemInfo() view for text display
@@ -40,7 +64,7 @@ struct Menu: View {
 //                        }
                         }
                 }
-            }
+            })
             .onAppear{
                 getMenuData()
             }
